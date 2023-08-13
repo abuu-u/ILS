@@ -16,7 +16,7 @@ export const ROUTE_REQUEST_SUCCEEDED = createAction<SuccessResponse>(
 
 const getRoute = async (route: Route) => {
   const response = await fetch(
-    `http://router.project-osrm.org/route/v1/driving/${route
+    `https://router.project-osrm.org/route/v1/driving/${route
       .map(([lat, lng]) => `${lng},${lat}`)
       .join(';')}?overview=full`,
   )
